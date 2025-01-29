@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindaTutor</title>
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+    <header class="shadow-sm">
+        <nav class="customContainer navbar h-[5rem]">
+            <div class="flex-1">
+                <a>
+                    <img src="./assets/logo.png" class="w-44" alt="">
+                </a>
+            </div>
+            <div>
+                <ul class="flex gap-6 text-sm lg:flex hidden">
+                    <li>
+                        <div class="dropdown">
+                            <div tabindex="0" role="button" class="">Browse<i
+                                    class="fa-solid fa-chevron-down text-xs ml-1"></i>
+                            </div>
+                            <ul tabindex="0"
+                                class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                                <li><a>Browse Tutors</a></li>
+                                <li><a>Find a Tuition Jobs</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a class="hover:text-greenClr">Resources</a></li>
+                    <li><a class="hover:text-greenClr">Login</a></li>
+                    <li><a class="hover:text-greenClr">Signup</a></li>
+                    <li><a class="bg-greenClr text-white rounded-full px-6 py-3 hover:bg-lightGreenClr">Find Tutor</a>
+                    </li>
+                    <li><a class="bg-greenClr text-white rounded-full px-6 py-3 hover:bg-lightGreenClr">Become a
+                            Tutor</a>
+                    </li>
+                </ul>
+                <div class="drawer drawer-end lg:hidden block">
+                    <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+                    <div class="drawer-content">
+                        <!-- Page content here -->
+                        <label for="my-drawer-4" class=""><i
+                                class="fa-solid fa-bars text-xl text-greenClr cursor-pointer"></i></label>
+                    </div>
+                    <div class="drawer-side z-[999]">
+                        <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
+                        <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+                            <!-- Sidebar content here -->
+                            <li>
+                                <details>
+                                    <summary>Browse</summary>
+                                    <ul class="p-2">
+                                        <li><a>Browse Tutors</a></li>
+                                        <li><a>Find a Tuition Jobs</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                            <li><a class="hover:text-greenClr">Resources</a></li>
+                            <li><a class="hover:text-greenClr">Login</a></li>
+                            <li><a class="hover:text-greenClr">Signup</a></li>
+                            <li><a class="hover:text-greenClr">Find Tutor</a></li>
+                            <li><a class="hover:text-greenClr">Become a Tutor</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="bg-bgClr rounded-b-[100px] relative">
+            <div
+                class="customContainer grid lg:grid-cols-2 md:grid-cols-1 items-center gap-8 lg:h-[600px] md:h-[800px] sm:h-[600px] h-[620px]">
+                <div>
+                    <h1 class="text-5xl font-bold text-greenClr mb-3 animate-slide">
+                        Find the best tutors in Singapore
+                    </h1>
+                    <p class="text-lightGreenClr mb-2 animate-slide">Crack exams, learn new skills, improve grades with the help of
+                        great
+                        teachers. Post your learning
+                        needs and let qualified tutors get in touch with you.</p>
+                    <div class="flex flex-wrap gap-2 mb-5 animate-reveal">
+                        <div class="bg-white text-greenClr py-1 px-2 text-sm rounded-full">
+                            English
+                        </div>
+                        <div class="bg-white text-greenClr py-1 px-2 text-sm rounded-full">
+                            Mathematics
+                        </div>
+                        <div class="bg-white text-greenClr py-1 px-2 text-sm rounded-full">
+                            Science
+                        </div>
+                        <div class="bg-white text-greenClr py-1 px-2 text-sm rounded-full">
+                            Chinese
+                        </div>
+                        <div class="bg-white text-greenClr py-1 px-2 text-sm rounded-full">
+                            Higher Chinese
+                        </div>
+                        <div class="bg-white text-greenClr py-1 px-2 text-sm rounded-full">
+                            Malay
+                        </div>
+                        <div class="bg-white text-greenClr py-1 px-2 text-sm rounded-full">
+                            Maths
+                        </div>
+                        <div class="bg-white text-greenClr py-1 px-2 text-sm rounded-full">
+                            Geography
+                        </div>
+                        <div class="bg-white text-greenClr py-1 px-2 text-sm rounded-full">
+                            History
+                        </div>
+                        <div class="bg-white text-greenClr py-1 px-2 text-sm rounded-full">
+                            Literature
+                        </div>
+                        <div class="bg-white text-greenClr py-1 px-2 text-sm rounded-full">
+                            Social Studies
+                        </div>
+                        <div class="bg-white text-greenClr py-1 px-2 text-sm rounded-full">
+                            Design and Technology
+                        </div>
+                        <div class="bg-white text-greenClr py-1 px-2 text-sm rounded-full">
+                            Art
+                        </div>
+                    </div>
+                    <div class="flex gap-3 animate-scale">
+                        <button class="bg-greenClr text-white rounded-full px-6 py-2 hover:bg-lightGreenClr">Find Tutor
+                            - It's FREE</button>
+                        <img src="./assets/Cap.png" alt="">
+                    </div>
+                </div>
+                <div class="relative h-full lg:block md:block sm:hidden hidden">
+                    <div
+                        class="bg-white shadow-md rounded-2xl py-4 px-6 absolute lg:right-48 md:right-[300px] top-10 grid gap-2 animate-float">
+                        <p class="font-semibold text-lg">Rick Flair</p>
+                        <p class="text-greenClr font-medium text-sm">$15.00/hr</p>
+                        <div>
+                            <p class="text-sm font-light text-gray-500">Completed Hours: 25</p>
+                            <p class="text-sm font-light text-gray-500">English, Maths, Art</p>
+                        </div>
+                        <div>
+                            <span>5.0</span>
+                            <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                            <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                            <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                            <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                            <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white shadow-md rounded-2xl py-4 px-6 absolute lg:bottom-28 md:bottom-52 right-0 grid gap-2 animate-float">
+                        <p class="font-semibold text-lg">Rick Flair</p>
+                        <p class="text-greenClr font-medium text-sm">$15.00/hr</p>
+                        <div>
+                            <p class="text-sm font-light text-gray-500">Completed Hours: 25</p>
+                            <p class="text-sm font-light text-gray-500">English, Maths, Art</p>
+                        </div>
+                        <div>
+                            <span>5.0</span>
+                            <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                            <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                            <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                            <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                            <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                        </div>
+                    </div>
+                    <div class="bg-white shadow-md rounded-2xl py-4 px-6 absolute bottom-40 grid gap-2 animate-float">
+                        <p class="font-semibold text-lg">Rick Flair</p>
+                        <p class="text-greenClr font-medium text-sm">$15.00/hr</p>
+                        <div>
+                            <p class="text-sm font-light text-gray-500">Completed Hours: 25</p>
+                            <p class="text-sm font-light text-gray-500">English, Maths, Art</p>
+                        </div>
+                        <div>
+                            <span>5.0</span>
+                            <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                            <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                            <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                            <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                            <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                        </div>
+                    </div>
+                    <img src="./assets/Select.png"
+                        class="absolute lg:top-[50%] md:top-[-10%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+                        alt="">
+                    <img src="./assets/secureIcon.png" class="absolute lg:top-20 md:top-32 left-0" alt="">
+                    <img src="./assets/star.png" class="absolute bottom-20 lg:left-40 md:right-10" alt="">
+                    <div
+                        class="bg-gradient-to-b from-transparent to-white shadow-md rounded-2xl py-8 px-4 absolute bottom-48 left-56 grid gap-2">
+                    </div>
+                    <div
+                        class="bg-gradient-to-t from-transparent to-white shadow-sm rounded-2xl py-6 px-4 absolute top-40 lg:left-36 md:left-60 grid gap-2">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="relative">
+            <div
+                class="w-[80%] relative top-[-40px] translate-x-[-50%] left-1/2 bg-white rounded-2xl p-5 shadow-[0px_4px_0px_0px_rgba(0,0,0,0.1)]">
+                <div class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-4 lg:place-items-center">
+                    <div class="flex gap-2 items-center">
+                        <img src="./assets/cap-icon.png" class="border-r pr-2" alt="">
+                        <div>
+                            <p class="font-bold text-greenClr text-2xl mb-1">10K</p>
+                            <p class="text-sm text-lightGreenClr">Happy Students
+                                /Parents</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <img src="./assets/book-icon.png" class="border-r pr-2" alt="">
+                        <div>
+                            <p class="font-bold text-greenClr text-2xl mb-1">50+</p>
+                            <p class="text-sm text-lightGreenClr">Subjects to choose from</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <img src="./assets/student-icon.png" class="border-r pr-2" alt="">
+                        <div>
+                            <p class="font-bold text-greenClr text-2xl mb-1">400+</p>
+                            <p class="text-sm text-lightGreenClr">Completed Jobs</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <img src="./assets/tutor.png" class="border-r pr-2" alt="">
+                        <div>
+                            <p class="font-bold text-greenClr text-2xl mb-1">1000+</p>
+                            <p class="text-sm text-lightGreenClr">Tutors available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="customContainer my-10 mt-20">
+                <h2 class="text-3xl font-bold mb-5 text-center text-greenClr">Explore FindaTutor</h2>
+                <div
+                    class="bg-white border grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 items-center gap-4 rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)] mb-8">
+                    <div class="text-center"><img src="./assets/Student.png" alt=""></div>
+                    <div class="flex-1 ml-5">
+                        <p class="text-sm">Join as a</p>
+                        <p class="font-bold text-greenClr text-lg mb-3">Student/Parent</p>
+                        <ul>
+                            <li class="flex gap-2 mb-2">
+                                <img src="./assets/checkbox.png" class="object-contain" alt="">
+                                <p class="text-sm text-lightGreenClr">Search for online and local tutors</p>
+                            </li>
+                            <li class="flex gap-2 mb-2">
+                                <img src="./assets/checkbox.png" class="object-contain" alt="">
+                                <p class="text-sm text-lightGreenClr">All our tutors are verified, Qualified and Safe
+                                </p>
+                            </li>
+                            <li class="flex gap-2 mb-2">
+                                <img src="./assets/checkbox.png" class="object-contain" alt="">
+                                <p class="text-sm text-lightGreenClr">Manage your lessons through our bookings system
+                                </p>
+                            </li>
+                            <li class="flex gap-2 mb-2">
+                                <img src="./assets/checkbox.png" class="object-contain" alt="">
+                                <p class="text-sm text-lightGreenClr">If you are not satisfied with your tutor we will
+                                    refund our fee </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:col-span-1 md:col-span-2 sm:col-span-2 lg:text-right">
+                        <button
+                            class="bg-greenClr lg:w-auto w-full text-white text-sm rounded-full px-6 py-2 hover:bg-lightGreenClr">Find
+                            Tutor <i class="fa-solid fa-chevron-right text-xs"></i></button>
+                    </div>
+                </div>
+                <div
+                    class="bg-white border grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 items-center gap-4 rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)] mb-8">
+                    <div class="flex-1 ml-5">
+                        <p class="text-sm">Join as a</p>
+                        <p class="font-bold text-greenClr text-lg mb-3">Student/Parent</p>
+                        <ul>
+                            <li class="flex gap-2 mb-2">
+                                <img src="./assets/checkbox.png" class="object-contain" alt="">
+                                <p class="text-sm text-lightGreenClr">Our site is completely free for tutors.</p>
+                            </li>
+                            <li class="flex gap-2 mb-2">
+                                <img src="./assets/checkbox.png" class="object-contain" alt="">
+                                <p class="text-sm text-lightGreenClr">Create your own profile and advertise your
+                                    services</p>
+                            </li>
+                            <li class="flex gap-2 mb-2">
+                                <img src="./assets/checkbox.png" class="object-contain" alt="">
+                                <p class="text-sm text-lightGreenClr">Search for tuition jobs using our search</p>
+                            </li>
+                            <li class="flex gap-2 mb-2">
+                                <img src="./assets/checkbox.png" class="object-contain" alt="">
+                                <p class="text-sm text-lightGreenClr">Apply for jobs and start earning.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:block hidden">
+                        <button
+                            class="bg-greenClr text-white text-sm rounded-full px-6 py-2 hover:bg-lightGreenClr">Find
+                            Tuition Job <i class="fa-solid fa-chevron-right text-xs"></i></button>
+                    </div>
+                    <div><img src="./assets/Teaher.png" alt=""></div>
+                    <div class="lg:hidden block lg:col-span-1 md:col-span-2 sm:col-span-2 lg:text-right">
+                        <button
+                            class="w-full bg-greenClr text-white text-sm rounded-full px-6 py-2 hover:bg-lightGreenClr">Find
+                            Tuition Job <i class="fa-solid fa-chevron-right text-xs"></i></button>
+                    </div>
+                </div>
+                <div>
+                    <div
+                        class="flex lg:flex-row md:flex-row sm:flex-col flex-col justify-between lg:items-end gap-4 mb-5">
+                        <p class="text-4xl font-bold text-greenClr">Learn,<br> Explore your city</p>
+                        <div>
+                            <button
+                                class="bg-greenClr text-white text-sm rounded-full px-4 py-3 hover:bg-lightGreenClr">Find
+                                Tutor - It's FREE</button>
+                            <button
+                                class="bg-greenClr text-white text-sm rounded-full px-4 py-3 hover:bg-lightGreenClr">Sign
+                                Up as a Tutor</button>
+                        </div>
+                    </div>
+                    <div class="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-2 gap-4">
+                        <div class="bg-bgGreenClr p-3 rounded-lg">
+                            <p class="text-greenClr font-semibold mb-1">North</p>
+                            <p class="text-sm">201 Tutor</p>
+                        </div>
+                        <div class="bg-bgGreenClr p-3 rounded-lg">
+                            <p class="text-greenClr font-semibold mb-1">North-East</p>
+                            <p class="text-sm">201 Tutor</p>
+                        </div>
+                        <div class="bg-bgGreenClr p-3 rounded-lg">
+                            <p class="text-greenClr font-semibold mb-1">East</p>
+                            <p class="text-sm">201 Tutor</p>
+                        </div>
+                        <div class="bg-bgGreenClr p-3 rounded-lg">
+                            <p class="text-greenClr font-semibold mb-1">Central</p>
+                            <p class="text-sm">201 Tutor</p>
+                        </div>
+                        <div class="bg-bgGreenClr p-3 rounded-lg">
+                            <p class="text-greenClr font-semibold mb-1">West</p>
+                            <p class="text-sm">201 Tutor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute top-0 left-0 -z-10">
+                    <img src="./assets/ellipse1.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="bg-bgGreenClr">
+            <div class="customContainer py-10">
+                <h3 class="text-3xl font-bold text-center text-greenClr mb-5">Connect with Top Tutors Across All
+                    Subjects
+                </h3>
+                <div
+                    class="grid lg:grid-cols-2 md:grid-cols-1 md:place-items-center sm:grid-cols-1 grid-cols-1 gap-4 items-start">
+                    <div>
+                        <img src="./assets/conect-section-img.png" alt="">
+                    </div>
+                    <div>
+                        <div class="p-4">
+                            <ul class="flex bg-bgClr rounded-full overflow-scroll hideScrollbar">
+                                <li id="primaryTab"
+                                    class="tabBtns text-nowrap text-sm text-white font-bold tracking-wide w-full text-center bg-greenClr rounded-full py-3 px-6 cursor-pointer">
+                                    PRIMARY</li>
+                                <li id="lowerTab"
+                                    class="tabBtns text-nowrap text-sm text-gray-600 font-medium tracking-wide w-full text-center py-3 px-6 rounded-full cursor-pointer">
+                                    LOWER SEC</li>
+                                <li id="upperTab"
+                                    class="tabBtns text-nowrap text-sm text-gray-600 font-medium tracking-wide w-full text-center py-3 px-6 rounded-full cursor-pointer">
+                                    UPPER SEC</li>
+                                <li id="jcTab"
+                                    class="tabBtns text-nowrap text-sm text-gray-600 font-medium tracking-wide w-full text-center py-3 px-6 rounded-full cursor-pointer">
+                                    JC/PRE-U</li>
+                            </ul>
+
+                            <div id="primaryContent"
+                                class="tab-content max-w-2xl block mt-8 grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 grid-cols-2 gap-4">
+                                <div class="bg-white rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)]">
+                                    <p class="text-greenClr font-bold mb-1">Science</p>
+                                    <p class="text-sm">301 Tutor</p>
+                                    <div class="flex justify-end mt-5">
+                                        <img src="./assets/Science.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)]">
+                                    <p class="text-greenClr font-bold mb-1">Mathematics</p>
+                                    <p class="text-sm">301 Tutor</p>
+                                    <div class="flex justify-end mt-5">
+                                        <img src="./assets/calculator.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)]">
+                                    <p class="text-greenClr font-bold mb-1">Higher Chinese</p>
+                                    <p class="text-sm">301 Tutor</p>
+                                    <div class="flex justify-end mt-5">
+                                        <img src="./assets/higher-chinese.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)]">
+                                    <p class="text-greenClr font-bold mb-1">Chinese</p>
+                                    <p class="text-sm">301 Tutor</p>
+                                    <div class="flex justify-end mt-5">
+                                        <img src="./assets/chinese.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="bg-white border rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)]">
+                                    <p class="text-greenClr font-bold mb-1">English</p>
+                                    <p class="text-sm">301 Tutor</p>
+                                    <div class="flex justify-end mt-5">
+                                        <img src="./assets/cube-1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)]">
+                                    <p class="text-greenClr font-bold mb-1">Malay</p>
+                                    <p class="text-sm">301 Tutor</p>
+                                    <div class="flex justify-end mt-5">
+                                        <img src="./assets/Malay.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="lowerContent"
+                                class="tab-content max-w-2xl block mt-8 grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 grid-cols-2 gap-4 hidden">
+                                <div class="bg-white rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)]">
+                                    <p class="text-greenClr font-bold mb-1">Science</p>
+                                    <p class="text-sm">301 Tutor</p>
+                                    <div class="flex justify-end mt-5">
+                                        <img src="./assets/Science.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="bg-white border rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)]">
+                                    <p class="text-greenClr font-bold mb-1">English 2</p>
+                                    <p class="text-sm">301 Tutor</p>
+                                    <div class="flex justify-end mt-5">
+                                        <img src="./assets/cube-1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)]">
+                                    <p class="text-greenClr font-bold mb-1">Mathematics</p>
+                                    <p class="text-sm">301 Tutor</p>
+                                    <div class="flex justify-end mt-5">
+                                        <img src="./assets/calculator.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)]">
+                                    <p class="text-greenClr font-bold mb-1">Malay</p>
+                                    <p class="text-sm">301 Tutor</p>
+                                    <div class="flex justify-end mt-5">
+                                        <img src="./assets/Malay.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)]">
+                                    <p class="text-greenClr font-bold mb-1">Higher Chinese</p>
+                                    <p class="text-sm">301 Tutor</p>
+                                    <div class="flex justify-end mt-5">
+                                        <img src="./assets/higher-chinese.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)]">
+                                    <p class="text-greenClr font-bold mb-1">Chinese</p>
+                                    <p class="text-sm">301 Tutor</p>
+                                    <div class="flex justify-end mt-5">
+                                        <img src="./assets/chinese.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="upperContent"
+                                class="tab-content max-w-2xl block mt-8 grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 grid-cols-2 gap-4 hidden">
+                                <div class="bg-white rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)]">
+                                    <p class="text-greenClr font-bold mb-1">Science</p>
+                                    <p class="text-sm">301 Tutor</p>
+                                    <div class="flex justify-end mt-5">
+                                        <img src="./assets/Science.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)]">
+                                    <p class="text-greenClr font-bold mb-1">Mathematics</p>
+                                    <p class="text-sm">301 Tutor</p>
+                                    <div class="flex justify-end mt-5">
+                                        <img src="./assets/calculator.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="bg-white border rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)]">
+                                    <p class="text-greenClr font-bold mb-1">English 3</p>
+                                    <p class="text-sm">301 Tutor</p>
+                                    <div class="flex justify-end mt-5">
+                                        <img src="./assets/cube-1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)]">
+                                    <p class="text-greenClr font-bold mb-1">Higher Chinese</p>
+                                    <p class="text-sm">301 Tutor</p>
+                                    <div class="flex justify-end mt-5">
+                                        <img src="./assets/higher-chinese.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)]">
+                                    <p class="text-greenClr font-bold mb-1">Chinese</p>
+                                    <p class="text-sm">301 Tutor</p>
+                                    <div class="flex justify-end mt-5">
+                                        <img src="./assets/chinese.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)]">
+                                    <p class="text-greenClr font-bold mb-1">Malay</p>
+                                    <p class="text-sm">301 Tutor</p>
+                                    <div class="flex justify-end mt-5">
+                                        <img src="./assets/Malay.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="jcContent"
+                                class="tab-content max-w-2xl block mt-8 grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 grid-cols-2 gap-4 hidden">
+                                <div class="bg-white rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)]">
+                                    <p class="text-greenClr font-bold mb-1">Science</p>
+                                    <p class="text-sm">301 Tutor</p>
+                                    <div class="flex justify-end mt-5">
+                                        <img src="./assets/Science.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)]">
+                                    <p class="text-greenClr font-bold mb-1">Mathematics</p>
+                                    <p class="text-sm">301 Tutor</p>
+                                    <div class="flex justify-end mt-5">
+                                        <img src="./assets/calculator.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)]">
+                                    <p class="text-greenClr font-bold mb-1">Chinese</p>
+                                    <p class="text-sm">301 Tutor</p>
+                                    <div class="flex justify-end mt-5">
+                                        <img src="./assets/chinese.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="bg-white border rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)]">
+                                    <p class="text-greenClr font-bold mb-1">English</p>
+                                    <p class="text-sm">301 Tutor</p>
+                                    <div class="flex justify-end mt-5">
+                                        <img src="./assets/cube-1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)]">
+                                    <p class="text-greenClr font-bold mb-1">Higher Chinese</p>
+                                    <p class="text-sm">301 Tutor</p>
+                                    <div class="flex justify-end mt-5">
+                                        <img src="./assets/higher-chinese.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 shadow-[0px_6px_0px_0px_rgba(0,0,0,0.1)]">
+                                    <p class="text-greenClr font-bold mb-1">Malay</p>
+                                    <p class="text-sm">301 Tutor</p>
+                                    <div class="flex justify-end mt-5">
+                                        <img src="./assets/Malay.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <button class="bg-greenClr text-white text-sm rounded-full px-6 py-2 hover:bg-lightGreenClr">Find
+                        Tutor - It's FREE</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="my-10">
+                <h4 class="text-3xl font-bold text-center text-greenClr mb-8">Featured Tutor
+                </h4>
+                <div>
+                    <div id="tutorSlider" class="splide px-6">
+                        <div class="splide__track py-4">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <div
+                                        class="rounded-lg bg-white shadow-[0px_0px_4px_2px_rgba(0,0,0,0.1)] p-4 flex lg:flex-row flex-col lg:gap-4">
+                                        <div>
+                                            <div>
+                                                <div class="flex justify-between">
+                                                    <p><span class="font-medium">Emma Rose</span> <i
+                                                            class="fa-solid fa-circle-check text-greenClr"></i></p>
+                                                    <p class="text-greenClr font-bold">$15.00/hr</p>
+                                                </div>
+                                                <p class="text-sm">Region: North-East</p>
+                                                <p class="text-sm my-2"><i
+                                                        class="fa-solid fa-location-dot text-greenClr mr-2"></i><span>Kampong
+                                                        Glam, Singapore</span></p>
+                                                <div class="">
+                                                    <p class="text-sm leading-loose text-gray-600 font-light">Levels:
+                                                        Primary, Secondary
+                                                    </p>
+                                                    <p class="text-sm leading-loose text-gray-600 font-light">Subjects
+                                                        English, Maths, Art
+                                                    </p>
+                                                    <p class="text-sm leading-loose text-gray-600 font-light">Category:
+                                                        Part-time</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-1 lg:text-right text-left leading-loose">
+                                            <div
+                                                class="text-xs bg-greenClr rounded-full p-1 text-white inline-block font-light">
+                                                <i class="fa-regular fa-gem mr-1"></i>Featured
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <span>5.0</span>
+                                            </div>
+                                            <button><i
+                                                    class="fa-regular fa-heart text-greenClr mr-1"></i>Favorite</button>
+                                            <p class="text-sm text-gray-600 font-light">Completed hours: 5</p>
+                                            <button
+                                                class="w-full bg-greenClr text-white text-sm rounded-full px-4 py-2 hover:bg-lightGreenClr mt-3">Message</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div
+                                        class="rounded-lg bg-white shadow-[0px_0px_4px_2px_rgba(0,0,0,0.1)] p-4 flex lg:flex-row flex-col lg:gap-4">
+                                        <div>
+                                            <div>
+                                                <div class="flex justify-between">
+                                                    <p><span class="font-medium">Emma Rose</span> <i
+                                                            class="fa-solid fa-circle-check text-greenClr"></i></p>
+                                                    <p class="text-greenClr font-bold">$15.00/hr</p>
+                                                </div>
+                                                <p class="text-sm">Region: North-East</p>
+                                                <p class="text-sm my-2"><i
+                                                        class="fa-solid fa-location-dot text-greenClr mr-2"></i><span>Kampong
+                                                        Glam, Singapore</span></p>
+                                                <div class="">
+                                                    <p class="text-sm leading-loose text-gray-600 font-light">Levels:
+                                                        Primary, Secondary
+                                                    </p>
+                                                    <p class="text-sm leading-loose text-gray-600 font-light">Subjects
+                                                        English, Maths, Art
+                                                    </p>
+                                                    <p class="text-sm leading-loose text-gray-600 font-light">Category:
+                                                        Part-time</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-1 lg:text-right text-left leading-loose">
+                                            <div
+                                                class="text-xs bg-greenClr rounded-full p-1 text-white inline-block font-light">
+                                                <i class="fa-regular fa-gem mr-1"></i>Featured
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <span>5.0</span>
+                                            </div>
+                                            <button><i
+                                                    class="fa-regular fa-heart text-greenClr mr-1"></i>Favorite</button>
+                                            <p class="text-sm text-gray-600 font-light">Completed hours: 5</p>
+                                            <button
+                                                class="w-full bg-greenClr text-white text-sm rounded-full px-4 py-2 hover:bg-lightGreenClr mt-3">Message</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div
+                                        class="rounded-lg bg-white shadow-[0px_0px_4px_2px_rgba(0,0,0,0.1)] p-4 flex lg:flex-row flex-col lg:gap-4">
+                                        <div>
+                                            <div>
+                                                <div class="flex justify-between">
+                                                    <p><span class="font-medium">Emma Rose</span> <i
+                                                            class="fa-solid fa-circle-check text-greenClr"></i></p>
+                                                    <p class="text-greenClr font-bold">$15.00/hr</p>
+                                                </div>
+                                                <p class="text-sm">Region: North-East</p>
+                                                <p class="text-sm my-2"><i
+                                                        class="fa-solid fa-location-dot text-greenClr mr-2"></i><span>Kampong
+                                                        Glam, Singapore</span></p>
+                                                <div class="">
+                                                    <p class="text-sm leading-loose text-gray-600 font-light">Levels:
+                                                        Primary, Secondary
+                                                    </p>
+                                                    <p class="text-sm leading-loose text-gray-600 font-light">Subjects
+                                                        English, Maths, Art
+                                                    </p>
+                                                    <p class="text-sm leading-loose text-gray-600 font-light">Category:
+                                                        Part-time</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-1 lg:text-right text-left leading-loose">
+                                            <div
+                                                class="text-xs bg-greenClr rounded-full p-1 text-white inline-block font-light">
+                                                <i class="fa-regular fa-gem mr-1"></i>Featured
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <span>5.0</span>
+                                            </div>
+                                            <button><i
+                                                    class="fa-regular fa-heart text-greenClr mr-1"></i>Favorite</button>
+                                            <p class="text-sm text-gray-600 font-light">Completed hours: 5</p>
+                                            <button
+                                                class="w-full bg-greenClr text-white text-sm rounded-full px-4 py-2 hover:bg-lightGreenClr mt-3">Message</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div
+                                        class="rounded-lg bg-white shadow-[0px_0px_4px_2px_rgba(0,0,0,0.1)] p-4 flex lg:flex-row flex-col lg:gap-4">
+                                        <div>
+                                            <div>
+                                                <div class="flex justify-between">
+                                                    <p><span class="font-medium">Emma Rose</span> <i
+                                                            class="fa-solid fa-circle-check text-greenClr"></i></p>
+                                                    <p class="text-greenClr font-bold">$15.00/hr</p>
+                                                </div>
+                                                <p class="text-sm">Region: North-East</p>
+                                                <p class="text-sm my-2"><i
+                                                        class="fa-solid fa-location-dot text-greenClr mr-2"></i><span>Kampong
+                                                        Glam, Singapore</span></p>
+                                                <div class="">
+                                                    <p class="text-sm leading-loose text-gray-600 font-light">Levels:
+                                                        Primary, Secondary
+                                                    </p>
+                                                    <p class="text-sm leading-loose text-gray-600 font-light">Subjects
+                                                        English, Maths, Art
+                                                    </p>
+                                                    <p class="text-sm leading-loose text-gray-600 font-light">Category:
+                                                        Part-time</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-1 lg:text-right text-left leading-loose">
+                                            <div
+                                                class="text-xs bg-greenClr rounded-full p-1 text-white inline-block font-light">
+                                                <i class="fa-regular fa-gem mr-1"></i>Featured
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <span>5.0</span>
+                                            </div>
+                                            <button><i
+                                                    class="fa-regular fa-heart text-greenClr mr-1"></i>Favorite</button>
+                                            <p class="text-sm text-gray-600 font-light">Completed hours: 5</p>
+                                            <button
+                                                class="w-full bg-greenClr text-white text-sm rounded-full px-4 py-2 hover:bg-lightGreenClr mt-3">Message</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div
+                                        class="rounded-lg bg-white shadow-[0px_0px_4px_2px_rgba(0,0,0,0.1)] p-4 flex lg:flex-row flex-col lg:gap-4">
+                                        <div>
+                                            <div>
+                                                <div class="flex justify-between">
+                                                    <p><span class="font-medium">Emma Rose</span> <i
+                                                            class="fa-solid fa-circle-check text-greenClr"></i></p>
+                                                    <p class="text-greenClr font-bold">$15.00/hr</p>
+                                                </div>
+                                                <p class="text-sm">Region: North-East</p>
+                                                <p class="text-sm my-2"><i
+                                                        class="fa-solid fa-location-dot text-greenClr mr-2"></i><span>Kampong
+                                                        Glam, Singapore</span></p>
+                                                <div class="">
+                                                    <p class="text-sm leading-loose text-gray-600 font-light">Levels:
+                                                        Primary, Secondary
+                                                    </p>
+                                                    <p class="text-sm leading-loose text-gray-600 font-light">Subjects
+                                                        English, Maths, Art
+                                                    </p>
+                                                    <p class="text-sm leading-loose text-gray-600 font-light">Category:
+                                                        Part-time</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-1 lg:text-right text-left leading-loose">
+                                            <div
+                                                class="text-xs bg-greenClr rounded-full p-1 text-white inline-block font-light">
+                                                <i class="fa-regular fa-gem mr-1"></i>Featured
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <i class="fa-solid fa-graduation-cap text-greenClr"></i>
+                                                <span>5.0</span>
+                                            </div>
+                                            <button><i
+                                                    class="fa-regular fa-heart text-greenClr mr-1"></i>Favorite</button>
+                                            <p class="text-sm text-gray-600 font-light">Completed hours: 5</p>
+                                            <button
+                                                class="w-full bg-greenClr text-white text-sm rounded-full px-4 py-2 hover:bg-lightGreenClr mt-3">Message</button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <button class="bg-greenClr text-white rounded-full px-6 py-2 hover:bg-lightGreenClr text-sm">View
+                        All Tutors</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="customContainer my-20">
+                <h5 class="text-3xl font-bold text-center text-greenClr mb-8">Latest Tuition Jobs </h5>
+                <div class="bg-white border shadow-[0px_8px_0px_0px_rgba(0,0,0,0.1)] rounded-lg mb-6">
+                    <div class="m-4">
+                        <p class="text-sm text-white bg-greenClr inline-block py-1 px-2 rounded-full"><i
+                                class="fa-regular fa-gem mr-1"></i><span>Featured</p>
+                        <p class="text-xs text-gray-600 font-light mt-2">Posted on: 1/13/2025</p>
+                    </div>
+                    <div class="flex justify-between items-center my-4 ps-4">
+                        <div>
+                            <p class="text-greenClr font-semibold mb-1">I am looking for home tuition for my Son, Are
+                                you
+                                interested please apply for it</p>
+                            <p class="font-light text-xs text-gray-600"><i
+                                    class="fa-solid fa-location-dot mr-2"></i><span>Central Water Catchment, Singapore
+                            </p>
+                        </div>
+                        <p class="text-greenClr font-bold bg-bgGreenClr p-3 rounded-l-full">$15.00/hr</p>
+                    </div>
+                    <div
+                        class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 grid-cols-1 lg:gap-8 md:gap-6 sm:gap-4 gap-2 m-4">
+                        <div class="leading-loose text-xs flex gap-10">
+                            <div>
+                                <p class="font-medium">Levels</p>
+                                <p class="font-medium">Grade/Year</p>
+                                <p class="font-medium">Subjects</p>
+                                <p class="font-medium">Tutor Category</p>
+                            </div>
+                            <div>
+                                <p>Levels</p>
+                                <p>Grade/Year</p>
+                                <p>Subjects</p>
+                                <p>Tutor Category</p>
+                            </div>
+                        </div>
+                        <div class="leading-loose text-xs flex gap-10">
+                            <div>
+                                <p class="font-medium">Frequency</p>
+                                <p class="font-medium">Duration</p>
+                                <p class="font-medium">Preferred Day/Time</p>
+                            </div>
+                            <div>
+                                <p>Weekday evenings</p>
+                                <p>2 Hours</p>
+                                <p>Wednesday 6pm</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex lg:flex-col md:flex-col sm:flex-col flex-row-reverse gap-4 lg:items-end md:items-end sm:items-end items-center justify-end">
+                            <button><i class="fa-regular fa-heart text-greenClr mr-1"></i> Favorite</button>
+                            <button
+                                class="bg-greenClr text-white rounded-full px-4 py-2 hover:bg-lightGreenClr lg:flex-none md:flex-none sm:flex-none flex-grow">Apply</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white border shadow-[0px_8px_0px_0px_rgba(0,0,0,0.1)] rounded-lg mb-6">
+                    <div class="m-4">
+                        <p class="text-sm text-white bg-greenClr inline-block py-1 px-2 rounded-full"><i
+                                class="fa-regular fa-gem mr-1"></i><span>Featured</p>
+                        <p class="text-xs text-gray-600 font-light mt-2">Posted on: 1/13/2025</p>
+                    </div>
+                    <div class="flex justify-between items-center my-4 ps-4">
+                        <div>
+                            <p class="text-greenClr font-semibold mb-1">I am looking for home tuition for my Son, Are
+                                you
+                                interested please apply for it</p>
+                            <p class="font-light text-xs text-gray-600"><i
+                                    class="fa-solid fa-location-dot mr-2"></i><span>Central Water Catchment, Singapore
+                            </p>
+                        </div>
+                        <p class="text-greenClr font-bold bg-bgGreenClr p-3 rounded-l-full">$15.00/hr</p>
+                    </div>
+                    <div
+                        class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 grid-cols-1 lg:gap-8 md:gap-6 sm:gap-4 gap-2 m-4">
+                        <div class="leading-loose text-xs flex gap-10">
+                            <div>
+                                <p class="font-medium">Levels</p>
+                                <p class="font-medium">Grade/Year</p>
+                                <p class="font-medium">Subjects</p>
+                                <p class="font-medium">Tutor Category</p>
+                            </div>
+                            <div>
+                                <p>Levels</p>
+                                <p>Grade/Year</p>
+                                <p>Subjects</p>
+                                <p>Tutor Category</p>
+                            </div>
+                        </div>
+                        <div class="leading-loose text-xs flex gap-10">
+                            <div>
+                                <p class="font-medium">Frequency</p>
+                                <p class="font-medium">Duration</p>
+                                <p class="font-medium">Preferred Day/Time</p>
+                            </div>
+                            <div>
+                                <p>Weekday evenings</p>
+                                <p>2 Hours</p>
+                                <p>Wednesday 6pm</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex lg:flex-col md:flex-col sm:flex-col flex-row-reverse gap-4 lg:items-end md:items-end sm:items-end items-center justify-end">
+                            <button><i class="fa-regular fa-heart text-greenClr mr-1"></i> Favorite</button>
+                            <button
+                                class="bg-greenClr text-white rounded-full px-4 py-2 hover:bg-lightGreenClr lg:flex-none md:flex-none sm:flex-none flex-grow">Apply</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white border shadow-[0px_8px_0px_0px_rgba(0,0,0,0.1)] rounded-lg mb-6">
+                    <div class="m-4">
+                        <p class="text-sm text-white bg-greenClr inline-block py-1 px-2 rounded-full"><i
+                                class="fa-regular fa-gem mr-1"></i><span>Featured</p>
+                        <p class="text-xs text-gray-600 font-light mt-2">Posted on: 1/13/2025</p>
+                    </div>
+                    <div class="flex justify-between items-center my-4 ps-4">
+                        <div>
+                            <p class="text-greenClr font-semibold mb-1">I am looking for home tuition for my Son, Are
+                                you
+                                interested please apply for it</p>
+                            <p class="font-light text-xs text-gray-600"><i
+                                    class="fa-solid fa-location-dot mr-2"></i><span>Central Water Catchment, Singapore
+                            </p>
+                        </div>
+                        <p class="text-greenClr font-bold bg-bgGreenClr p-3 rounded-l-full">$15.00/hr</p>
+                    </div>
+                    <div
+                        class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 grid-cols-1 lg:gap-8 md:gap-6 sm:gap-4 gap-2 m-4">
+                        <div class="leading-loose text-xs flex gap-10">
+                            <div>
+                                <p class="font-medium">Levels</p>
+                                <p class="font-medium">Grade/Year</p>
+                                <p class="font-medium">Subjects</p>
+                                <p class="font-medium">Tutor Category</p>
+                            </div>
+                            <div>
+                                <p>Levels</p>
+                                <p>Grade/Year</p>
+                                <p>Subjects</p>
+                                <p>Tutor Category</p>
+                            </div>
+                        </div>
+                        <div class="leading-loose text-xs flex gap-10">
+                            <div>
+                                <p class="font-medium">Frequency</p>
+                                <p class="font-medium">Duration</p>
+                                <p class="font-medium">Preferred Day/Time</p>
+                            </div>
+                            <div>
+                                <p>Weekday evenings</p>
+                                <p>2 Hours</p>
+                                <p>Wednesday 6pm</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex lg:flex-col md:flex-col sm:flex-col flex-row-reverse gap-4 lg:items-end md:items-end sm:items-end items-center justify-end">
+                            <button><i class="fa-regular fa-heart text-greenClr mr-1"></i> Favorite</button>
+                            <button
+                                class="bg-greenClr text-white rounded-full px-4 py-2 hover:bg-lightGreenClr lg:flex-none md:flex-none sm:flex-none flex-grow">Apply</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button
+                        class="bg-greenClr text-white text-sm rounded-full px-4 py-2 hover:bg-lightGreenClr mt-4">View
+                        All Jobs</button>
+                </div>
+            </div>
+        </section>
+        <section class="customContainer my-20">
+            <h6 class="text-3xl font-bold text-center text-greenClr mb-8">A Better Way to Learn with Confidence</h6>
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-4 place-items-center">
+                <div class="flex flex-col gap-4 justify-center items-center">
+                    <img src="./assets/badge.png" alt="">
+                    <div class="text-center">
+                        <p class="font-semibold text-greenClr text-lg">Safe & Verified Tutors</p>
+                        <p class="text-xs font-light text-gray-600">Our tutors are carefully screened to ensure highest
+                            quality.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4 justify-center items-center">
+                    <img src="./assets/scale.png" alt="">
+                    <div class="text-center">
+                        <p class="font-semibold text-greenClr text-lg">The Right Fit</p>
+                        <p class="text-xs font-light text-gray-600">Our tutors are carefully screened to ensure highest
+                            quality.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4 justify-center items-center">
+                    <img src="./assets/board.png" alt="">
+                    <div class="text-center">
+                        <p class="font-semibold text-greenClr text-lg">All Tools You Need</p>
+                        <p class="text-xs font-light text-gray-600">Our tutors are carefully screened to ensure highest
+                            quality.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4 justify-center items-center">
+                    <img src="./assets/archer.png" alt="">
+                    <div class="text-center">
+                        <p class="font-semibold text-greenClr text-lg">Real Result</p>
+                        <p class="text-xs font-light text-gray-600">Our tutors are carefully screened to ensure highest
+                            quality.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-bgGreenClr relative overflow-hidden">
+            <div class="customContainer py-20">
+                <h6 class="text-3xl font-bold text-left text-greenClr mb-8 z-20 relative">Many Talks</h6>
+                <div class="">
+                    <div id="testimonialSlider" class="splide z-20 relative">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <div class="rounded-lg bg-white border px-4 py-6">
+                                        <img src="./assets/comma.png" class="mb-3" alt="">
+                                        <p class="italic leading-loose">The website's features are great and the
+                                            services are
+                                            prompt and friendly. Thanks, findaTutor!
+                                            I have got my tutor.</p>
+                                        <p class="font-semibold mt-3">John Paul</p>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div class="rounded-lg bg-white border px-4 py-6">
+                                        <img src="./assets/comma.png" class="mb-3" alt="">
+                                        <p class="italic leading-loose">The website's features are great and the
+                                            services are
+                                            prompt and friendly. Thanks, findaTutor!
+                                            I have got my tutor.</p>
+                                        <p class="font-semibold mt-3">John Paul</p>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div class="rounded-lg bg-white border px-4 py-6">
+                                        <img src="./assets/comma.png" class="mb-3" alt="">
+                                        <p class="italic leading-loose">The website's features are great and the
+                                            services are
+                                            prompt and friendly. Thanks, findaTutor!
+                                            I have got my tutor.</p>
+                                        <p class="font-semibold mt-3">John Paul</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <button id="customPrev" class="text-white border border-white hover:bg-white hover:text-greenClr px-2 rounded-full absolute lg:top-[-25%] top-[110%] lg:left-[60%] left-[40%]">❮</button>
+                        <button id="customNext" class="text-white border border-white hover:bg-white hover:text-greenClr px-2 rounded-full absolute lg:top-[-25%] top-[110%] lg:left-[65%] left-[55%]">❯</button>
+                    </div>
+                </div>
+                <img src="./assets/testimonial-reactangle-1.png"
+                    class="h-96  object-cover absolute lg:right-0 lg:bottom-0 bottom-[-200px] z-10" alt="">
+            </div>
+        </section>
+    </main>
+    <footer class="bg-[#DDEDEB] rounded-t-[100px] mt-8">
+        <div class="customContainer py-20">
+            <div class="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-2 gap-4 place-items-center items-start">
+                <div>
+                    <p class="mb-1 font-semibold text-greenClr">Company</p>
+                    <ul class="text-sm text-lightGreenClr leading-loose">
+                        <li><i class="fa-solid fa-chevron-left mr-2"></i>Home</li>
+                        <li><i class="fa-solid fa-chevron-left mr-2"></i>About us</li>
+                        <li><i class="fa-solid fa-chevron-left mr-2"></i>Contact us</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="mb-1 font-semibold text-greenClr">Legal</p>
+                    <ul class="text-sm text-lightGreenClr leading-loose">
+                        <li><i class="fa-solid fa-chevron-left mr-2"></i>Terms and Condition</li>
+                        <li><i class="fa-solid fa-chevron-left mr-2"></i>Privacy Policies </li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="mb-1 font-semibold text-greenClr">Follow us</p>
+                    <ul class="text-sm text-lightGreenClr leading-loose">
+                        <li><i class="fa-brands fa-facebook-f mr-2"></i>Facebook</li>
+                        <li><i class="fa-brands fa-instagram mr-2"></i>Instagram</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="mb-1 font-semibold text-greenClr">Resources</p>
+                    <ul class="text-sm text-lightGreenClr leading-loose">
+                        <li><i class="fa-solid fa-chevron-left mr-2"></i>Faq</li>
+                        <li><i class="fa-solid fa-chevron-left mr-2"></i>Trust, safety & security</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 border-b-2 border-gray-300 pb-2">
+                <img src="./assets/logo.png" class="w-44 mx-auto" alt="">
+            </div>
+            <p class="text-center text-sm text-gray-600 mt-4">© 2025 FindaTutor. All rights reserved. Design & Develop
+                by Alkurn Technologies Pvt. Ltd.</p>
+        </div>
+    </footer>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        greenClr: '#00796B',
+                        lightGreenClr: '#4DB6AC',
+                        bgClr: '#E5EDEC',
+                        bgGreenClr: '#F1FAF9',
+                    },
+                    animation: {
+                        'morph': 'morph 8s ease-in-out infinite',
+                        'float': 'float 12s ease-in-out infinite',
+                        'gradient': 'gradient 8s linear infinite',
+                        'reveal': 'reveal 2s cubic-bezier(0.2, 1, 0.3, 1)',
+                        'slide': 'slide 2s cubic-bezier(0.2, 1, 0.3, 1)',
+                        'scale': 'scale 2s cubic-bezier(0.2, 1, 0.3, 1)',
+                    },
+                    keyframes: {
+                        morph: {
+                            '0%, 100%': { borderRadius: '60% 40% 30% 70%/60% 30% 70% 40%' },
+                            '50%': { borderRadius: '30% 60% 70% 40%/50% 60% 30% 60%' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0) scale(1)' },
+                            '50%': { transform: 'translateY(-20px) scale(1.05)' }
+                        },
+                        gradient: {
+                            '0%': { backgroundPosition: '0% 50%' },
+                            '100%': { backgroundPosition: '100% 50%' }
+                        },
+                        reveal: {
+                            '0%': { transform: 'translateY(20px)', opacity: 0 },
+                            '100%': { transform: 'translateY(0)', opacity: 1 }
+                        },
+                        slide: {
+                            '0%': { transform: 'translateX(-20px)', opacity: 0 },
+                            '100%': { transform: 'translateX(0)', opacity: 1 }
+                        },
+                        scale: {
+                            '0%': { transform: 'scale(0.95)', opacity: 0 },
+                            '100%': { transform: 'scale(1)', opacity: 1 }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
